@@ -1,0 +1,73 @@
+
+
+.quill-container {
+    width: 50%;
+    height: 200px;
+    margin-left: 67px;
+}
+input[type=text]{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.allEmployees{
+    margin-top: 20px;
+}
+.allEmployees>select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+} 
+
+
+.allEmployees>label {
+    margin-right: 20px;
+    font-weight: 500;
+    color: #424d58; 
+    font-size: 14px;
+}
+
+
+button {
+    margin-top: 10px ;
+    margin-bottom: 20px;
+}
+
+.employeesList>label {
+    margin-right: 10px;
+    font-weight: 500;
+    color: #424d58;
+    font-size: 14px;
+}
+.employeesList>ng-multiselect-dropdown {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.subject>label {
+    margin-right: 20px;
+    font-weight: 500;
+    color: #424d58;
+    font-size: 14px;
+}
+
+:host ::ng-deep .multiselect-dropdown .dropdown-btn {	
+	cursor: pointer;
+    background-color: white;
+}
+

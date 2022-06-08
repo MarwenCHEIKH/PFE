@@ -1,0 +1,39 @@
+<mat-nav-list>  
+
+    <h2 matSubheader>Pages</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/"><mat-icon>dashboard</mat-icon>Dashboard</a>
+        <a mat-list-item routerLinkActive="list-item-active" (click)="dropdown1()">
+            <mat-icon> email</mat-icon>
+            Email Manager
+            <mat-icon class="material-icon"> arrow_drop_down</mat-icon></a>
+    
+    <div class = "dropdown-menu" *ngIf="isDropped1">
+        <a class="dropdown-menu-item" mat-list-item routerLinkActive="list-item-active" routerLink="/sendEmail"  >Send Email</a>
+        <a class="dropdown-menu-item" mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Schedule Email</a>
+    </div>
+
+    <a mat-list-item routerLinkActive="list-item-active" (click)="dropdown2()"><mat-icon>attachment</mat-icon>Document Manager
+        <mat-icon class="material-icon"> arrow_drop_down</mat-icon></a>
+      
+    <div class = "dropdown-menu" *ngIf="isDropped2">
+        <a class="dropdown-menu-item" mat-list-item routerLinkActive="list-item-active" routerLink="/posts">request document</a>
+        <a class="dropdown-menu-item" mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Schedule Email</a>
+        
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>import_contacts</mat-icon>
+        Contacts
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>contact_phone</mat-icon>
+        Leads
+    </a>
+
+</mat-nav-list>

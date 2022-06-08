@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myProject';
+  sideBarOpen = true;
+
+  sideBarToggler(event: Event) {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 }
+

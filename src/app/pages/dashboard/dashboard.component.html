@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-md-8">
+            <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+                <div class="selectEmployees">
+                    <div class="allEmployees">
+                        <label for="employee">Employees</label>
+                        <select id="employee" name="employee" (change)="selectChangeHandler($event)">
+                            <option value="all employee" >All employees</option>
+                            <option value="select employee">Select employees</option>
+                        </select>
+                    </div>
+                    <div *ngIf="isSelect" class="employeesList">
+                        <label for="selectEmployees">Select Employees</label>
+                        <ng-multiselect-dropdown
+                        [placeholder]="'Select Employees'"
+                        [settings]="dropdownSettings"
+                        [data]="dropdownList"
+                        [(ngModel)]="selectedItems"
+                        (onSelect)="onItemSelect($event)"
+                        (onSelectAll)="onSelectAll($event)"
+                      >
+                      </ng-multiselect-dropdown>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="form-group">
+                    <div class="subject">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" formControlName="subject" required>
+                    </div>
+                    <div class="quill-container">
+                        <quill-editor formControlName="editor"></quill-editor>
+                        <button mat-raised-button color="primary">Send</button>
+                    </div>
+                </div>
+            </form>  
+        </div>
+        <input type="file" class="file-input"
+            (change)="onFileSelected($event)" #fileUpload>
+
+            <div class="file-upload">
+
+            {{fileName || "No file uploaded yet."}}
+
+                <button mat-mini-fab color="primary" class="upload-btn"
+                (click)="fileUpload.click()">
+                    <mat-icon>attach_file</mat-icon>
+                </button>
+            </div> 
+    </div>
+</div>
